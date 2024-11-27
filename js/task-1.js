@@ -1,3 +1,6 @@
+const mainContainer = document.querySelector('#categories');
+mainContainer.style.padding = "0";
+mainContainer.style.width="500px";
 
 const numbOfCategories = document.querySelectorAll('.item');
 console.log('Numbers of categories:', numbOfCategories.length);
@@ -7,7 +10,6 @@ numbOfCategories.forEach(category => {
     category.style.listStyle = "none";
     category.style.borderRadius = "8px";
     category.style.padding = "16px";
-   
 
 });
 
