@@ -30,6 +30,7 @@ gallery.style.flexWrap = "wrap";
 gallery.style.listStyle = "none";
 gallery.style.gap = "48px";
 gallery.style.padding = "0";
+const fragment = document.createDocumentFragment();
 
 for (const image of images) {
   const li = document.createElement('li');
@@ -43,12 +44,9 @@ for (const image of images) {
   img.style.width = "100%"; 
   img.style.height = "auto"; 
   img.style.objectFit = "cover";
-   
-li.appendChild(img);
-gallery.appendChild(li);
-
-
- 
   
-}
+  fragment.appendChild(li);
+  li.appendChild(img);
 
+}
+gallery.appendChild(fragment);
